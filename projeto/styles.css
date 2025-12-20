@@ -78,7 +78,14 @@ nav a:hover {
   gap: 30px;
 }
 
+.menu a {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
 
+.menu a:hover {
+  background-color: #4caf50;
+  transform: scale(1.05);
+}
 
 /* css do principal na pagina */
 main {
