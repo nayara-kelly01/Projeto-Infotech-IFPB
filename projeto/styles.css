@@ -345,28 +345,74 @@ main ul {
   margin: 5px 0;
 }
 
-/* botão comprar */
-.botao-comprar {
-  margin-top: 10px;
+.btn-comprar {
   background-color: #1b8f3a;
   color: white;
   border: none;
-  padding: 10px;
-  width: 100%;
-  border-radius: 8px;
+  padding: 12px;
   font-weight: bold;
+  border-radius: 6px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.botao-comprar:hover {
+/* animação contínua quando o mouse passa */
+.btn-comprar:hover {
   background-color: #4caf50;
-  transform: translateY(-5px);
+  animation: pulse 0.8s infinite;
 }
 
-/* responsividade da loja */
-@media (max-width: 900px) {
-  .loja {
-    grid-template-columns: 1fr;
+/* animação */
+@keyframes pulse {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-5px) scale(1.05);
+  }
+  100% {
+    transform: translateY(0) scale(1);
   }
 }
+
+/* carrinho fixo */
+.carrinho-fixo {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: #1b8f3a;
+  color: white;
+  font-size: 26px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  transition: transform 0.3s ease;
+}
+
+.carrinho-fixo:hover {
+  transform: scale(1.1);
+}
+
+/* contador do carrinho */
+.carrinho-fixo .contador {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
