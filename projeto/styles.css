@@ -240,3 +240,133 @@ main ul {
   border-radius: 12px;
   border: 4px solid #1b8f3a;
 }
+
+
+/* LOJA / E-COMMERCE*/
+/* layout geral da loja */
+.loja {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+/* filtros laterais */
+.filtros {
+  background-color: #e6f5ea;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.filtros h3 {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.filtros ul {
+  list-style: none;
+}
+
+.filtros li {
+  margin-bottom: 10px;
+}
+
+.filtros a {
+  text-decoration: none;
+  color: #0f5f2a;
+  font-weight: bold;
+}
+
+.filtros a:hover {
+  color: #1b8f3a;
+}
+
+/* vitrine de produtos */
+.vitrine {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* card do produto */
+.card-produto {
+  background-color: white;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.card-produto:hover {
+  transform: translateY(-5px);
+}
+
+/* imagem do produto */
+.card-produto img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+/* badge (OFERTA / NOVO) */
+.badge {
+  position: relative;
+  top: 10px;
+  left: 10px;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 6px;
+  color: white;
+}
+
+.badge.oferta {
+  background-color: #e53935;
+}
+
+.badge.novo {
+  background-color: #1b8f3a;
+}
+
+/* preços */
+.preco-antigo {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 14px;
+}
+
+.preco-novo {
+  color: #1b8f3a;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+/* botão comprar */
+.botao-comprar {
+  margin-top: 10px;
+  background-color: #1b8f3a;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.botao-comprar:hover {
+  background-color: #4caf50;
+  transform: translateY(-5px);
+}
+
+/* responsividade da loja */
+@media (max-width: 900px) {
+  .loja {
+    grid-template-columns: 1fr;
+  }
+}
