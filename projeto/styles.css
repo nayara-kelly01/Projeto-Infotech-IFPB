@@ -316,12 +316,14 @@ main ul {
 }
 
 /* imagem do produto */
-.card-produto img {
+.produto img {
   width: 100%;
   max-height: 180px;
   object-fit: contain;
-  margin-bottom: 15px;
+  display: block;
+  margin: 0 auto 15px;
 }
+
 
 /* nomes OFERTA e  NOVO) */
 .badge {
@@ -333,7 +335,7 @@ main ul {
   font-weight: bold;
   border-radius: 6px;
   color: white;
-  z-index: 10; /* MUITO IMPORTANTE */
+  z-index: 10; 
 }
 
 
@@ -389,11 +391,11 @@ main ul {
   }
 }
 
-/* carrinho fixo */
+/* icone do carrinho */
 .carrinho-fixo {
   position: fixed;
   bottom: 25px;
-  right: 25px;
+  left: 25px;   /* ⬅️ mudou para a esquerda */
   background-color: #1b8f3a;
   color: white;
   font-size: 26px;
@@ -405,15 +407,17 @@ main ul {
   justify-content: center;
   cursor: pointer;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-  z-index: 999;
+  z-index: 998; /* 👈 abaixo do chatbot */
   transition: transform 0.3s ease;
 }
+
+
 
 .carrinho-fixo:hover {
   transform: scale(1.1);
 }
 
-/* contador do carrinho */
+/* numero que fica em cima do carrinho */
 .carrinho-fixo .contador {
   position: absolute;
   top: -6px;
@@ -430,3 +434,12 @@ main ul {
   justify-content: center;
 }
 
+
+#chtl-widget {
+  z-index: 9999;
+}
+
+#chtl-script,
+iframe[src*="chatling"] {
+  z-index: 9000;
+}
