@@ -372,39 +372,6 @@ main ul {
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-/* carrinho no header */
-.carrinho-header {
-  position: relative;
-  margin-left: 20px;
-  font-size: 22px;
-  cursor: pointer;
-  color: white;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-/* bolinha do contador */
-.contador-carrinho {
-  background-color: red;
-  color: white;
-  font-size: 12px;
-  font-weight: bold;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* efeito hover */
-.carrinho-header:hover {
-  transform: scale(1.1);
-  transition: 0.2s ease;
-}
-
-
 /* animação do mouse */
 .btn-comprar:hover {
   background-color: #4caf50;
@@ -431,4 +398,41 @@ main ul {
 #chtl-script,
 iframe[src*="chatling"] {
   z-index: 9000;
+}
+
+
+/* carrinho do header css novo*/
+.carrinho-header {
+  position: relative;
+  font-size: 22px;
+  cursor: pointer;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.15);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* hover simples */
+.carrinho-header:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  transform: scale(1.05);
+}
+
+/* bolinha do contador */
+.contador-carrinho {
+  background-color: #e53935;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  min-width: 20px;
+  height: 20px;
+  padding: 2px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

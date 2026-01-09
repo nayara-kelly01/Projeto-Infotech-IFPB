@@ -25,7 +25,10 @@
     <a href="chamado.html">Abrir Chamado</a>
   </nav>
   
-  <a href="#" id="carrinho-menu">🛒 Carrinho (<span id="contador-carrinho">0</span>)</a>
+<div class="carrinho-header">
+  🛒
+  <span class="contador-carrinho">0</span>
+</div>
 
 
 </header>
@@ -34,27 +37,28 @@
 <body>  
 <main class="loja">
     <aside class="filtros">
-      <h1>Categorias</h1>
-      <ul>
-        <li><a href="#">Hardware</a></li>
-        <li><a href="#">Periféricos</a></li>
-        <li><a href="#">Monitores</a></li>
-        <li><a href="#">Placas de Vídeo</a></li>
-      </ul>
-    </aside>
+  <h1>Categorias</h1>
+  <ul>
+    <li><a href="#" data-filter="todos">Todos</a></li>
+    <li><a href="#" data-filter="hardware">Hardware</a></li>
+    <li><a href="#" data-filter="perifericos">Periféricos</a></li>
+    <li><a href="#" data-filter="monitores">Monitores</a></li>
+  </ul>
+</aside>
+
   
     <section class="vitrine">
   
-      <div class="produto">
+      <div class="produto" data-category="hardware">
         <span class="badge oferta">OFERTA</span>
         <img src="img/rtx4060.jpg" alt="RTX 4060">
         <h3>Placa de Vídeo RTX 4060</h3>
         <p class="preco-antigo">De R$ 3.999,00</p>
         <p class="preco-novo">Por R$ 3.299,00</p>
         <button class="btn-comprar">Comprar</button>
-      </div>
+    </div>
   
-      <div class="produto">
+      <div class="produto" data-category="hardware">
         <span class="badge novo">NOVO</span>
         <img src="img/ryzen5.jpg" alt="Ryzen 5">
         <h3>Processador Ryzen 5 5600</h3>
@@ -63,7 +67,7 @@
         <button class="btn-comprar">Comprar</button>
     </div>
   
-      <div class="produto">
+      <div class="produto" data-category="perifericos">
         <span class="badge novo">NOVO</span>
         <img src="img/mouse.jpg" alt="Ryzen 5">
         <h3>Mouse Gamer Redragon Griffin Pro</h3>
@@ -72,7 +76,7 @@
         <button class="btn-comprar">Comprar</button>
     </div>
       
-      <div class="produto">
+      <div class="produto" data-category="monitores">
         <span class="badge novo">NOVO</span>
         <img src="img/monitor.jpg" alt="Ryzen 5">
         <h3>Monitor Gamer Mancer Horizon Z3B, 23.8</h3>
