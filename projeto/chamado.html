@@ -3,9 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="styles.css" />
     <title>InfoTech IFPB - Abrir Chamado</title>
   </head>
+  
   <body>
    <header class="topo">
   <img src="img/logo.png" alt="Logo InfoTech IFPB" class="logo">
@@ -29,6 +33,9 @@
         <h2>Abrir Chamado de Manutenção</h2>
 
         <form>
+          <p id="mensagem-sucesso" class="sucesso">
+            ✅ Chamado enviado com sucesso! Em breve entraremos em contato.
+        </p>
          <label for="fullname">Nome:</label>
           <input id="fullname" type="text" placeholder="Ex: Jõao das Neves" />
 
@@ -51,6 +58,7 @@
           <textarea id="descricao" rows="5" required></textarea>
 
           <button type="submit" class="btn">Enviar Chamado</button>
+
         </form>
       </section>
     </main>
@@ -58,5 +66,20 @@
     <footer>
       <p>&copy; 2025 InfoTech IFPB - Todos os direitos reservados.</p>
     </footer>
+
+    <script>
+  const form = document.querySelector("form");
+  const mensagem = document.getElementById("mensagem-sucesso");
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault(); 
+
+    mensagem.style.display = "block";
+    form.reset(); // pra limpar a text area
+  });
+</script>
+
+
+
   </body>
 </html>

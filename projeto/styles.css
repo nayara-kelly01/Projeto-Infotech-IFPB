@@ -6,21 +6,20 @@
 }
 
 body {
-  font-family: "Merriweather", serif;
+  font-family: "Poppins", sans-serif;
   background-color: #f4f8f5;
   color: #333;
   line-height: 1.6;
 }
 
 /* css dos títulos */
-h1,
-h2,
-h3 {
-  font-family: "Bebas Neue", sans-serif;
-  color: #1b8f3a; /* verde IF */
-  margin-bottom: 10px;
-  text-align: center;
+
+h1, h2, h3,
+.topo h1,
+.subtitulo-topo {
+  font-family: "Poppins", sans-serif;
 }
+
 
 /* css do Cabeçalho e menu */
 
@@ -76,10 +75,13 @@ nav a:hover {
 }
 
 .subtitulo-topo {
+  font-family: "Oswald", sans-serif;
   color: #e6f5ea;
   font-size: 16px;
   margin-bottom: 20px;
+  letter-spacing: 0.5px;
 }
+
 
 .menu {
   display: flex;
@@ -116,15 +118,6 @@ main p {
   font-size: 24px;
 }
 
-/* listas */
-main ul {
-  margin-top: 15px;
-}
-
-main ul li {
-  margin-bottom: 10px;
-}
-
 
 /* legenda da parte de baixo */
 footer {
@@ -146,20 +139,9 @@ footer {
     padding: 0 10px;
   }
 
-  .imagem-servico {
-    float: none;
-    display: block;
-    margin: 20px auto;
-  }
 }
 
 /*Classes específicas que criei depois*/
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 15px;
-}
 
 main ul li {
   margin-bottom: 10px;
@@ -259,7 +241,7 @@ main ul {
   margin-top: 40px;
 }
 
-/* filtros laterais */
+/* filtros categorias */
 .filtros {
   background-color: #e6f5ea;
   padding: 20px;
@@ -311,9 +293,6 @@ main ul {
   transform: translateY(-5px);
 }
 
-.card-produto:hover {
-  transform: translateY(-5px);
-}
 
 /* imagem do produto */
 .produto img {
@@ -378,7 +357,7 @@ main ul {
   animation: pulse 0.8s infinite;
 }
 
-/* animação */
+/* animaçoes */
 @keyframes pulse {
   0% {
     transform: translateY(0) scale(1);
@@ -389,15 +368,6 @@ main ul {
   100% {
     transform: translateY(0) scale(1);
   }
-}
-
-#chtl-widget {
-  z-index: 9999;
-}
-
-#chtl-script,
-iframe[src*="chatling"] {
-  z-index: 9000;
 }
 
 
@@ -465,4 +435,154 @@ iframe[src*="chatling"] {
   text-decoration: none;
   color: inherit;
   display: block;
+}
+
+/* revisão do index*/
+
+main {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+main h1 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+main h2 {
+  margin-top: 30px;
+  font-size: 26px;
+}
+
+main h3 {
+  margin-top: 30px;
+  font-size: 22px;
+}
+
+main p {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* lista de serviços */
+main ul {
+  margin-top: 15px;
+  padding-left: 25px;
+}
+
+main ul li {
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.chamada-ajuda {
+  background-color: #e6f5ea;
+  padding: 15px;
+  border-left: 5px solid #1b8f3a;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+/*botão de serviços do index.html*/
+.btn-servicos {
+  display: inline-block;
+  margin-top: 15px;
+  background-color: #1b8f3a;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-servicos:hover {
+  background-color: #4caf50;
+  transform: scale(1.05);
+}
+
+/* estilização do abrir chmado */
+
+.formulario {
+  max-width: 600px;
+  margin: 40px auto;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.formulario h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #1b8f3a;
+}
+.formulario form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.formulario label {
+  font-weight: 500;
+  color: #0f5f2a;
+}
+
+.formulario input,
+.formulario select,
+.formulario textarea {
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.formulario input:focus,
+.formulario select:focus,
+.formulario textarea:focus {
+  outline: none;
+  border-color: #1b8f3a;
+  box-shadow: 0 0 0 2px rgba(27, 143, 58, 0.2);
+}
+
+.formulario .btn {
+  margin-top: 15px;
+  background-color: #1b8f3a;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.formulario .btn:hover {
+  background-color: #4caf50;
+  transform: translateY(-2px);
+}
+
+/*reponsividade*/
+@media (max-width: 600px) {
+  .formulario {
+    margin: 20px;
+    padding: 20px;
+  }
+}
+
+.sucesso {
+  display: none;
+  margin-top: 15px;
+  padding: 12px;
+  background-color: #e6f5ea;
+  color: #0f5f2a;
+  border: 2px solid #1b8f3a;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: 500;
 }
