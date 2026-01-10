@@ -436,3 +436,33 @@ iframe[src*="chatling"] {
   align-items: center;
   justify-content: center;
 }
+
+/* pagina de produyo individuaol */
+
+.detalhe-produto {
+  max-width: 900px;
+  margin: 40px auto;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.img-detalhe {
+  width: 400px;
+  border-radius: 12px;
+}
+
+.info-produto {
+  max-width: 400px;
+}
+
+.descricao {
+  margin: 15px 0;
+  text-align: justify;
+}
+
+.link-produto {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}

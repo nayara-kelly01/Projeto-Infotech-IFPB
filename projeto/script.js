@@ -15,7 +15,7 @@ botoesComprar.forEach((botao) => {
   });
 });
 
-// filtro de produtos por categoria att2.0 oficial
+/* filtro de produtos por categoria att2.0 oficial*/
 const filtros = document.querySelectorAll(".filtros a");
 const produtos = document.querySelectorAll(".produto");
 
@@ -34,3 +34,7 @@ filtros.forEach(filtro => {
     });
   });
 });
+
+
+
+
